@@ -22,8 +22,9 @@
 .section-blue {
     background-color: blue;
     color: white;
-    padding: 10px;
+    padding: 20px;
     height: 10%;
+    font-size: 24px;
 }
 
     .section-orange {
@@ -54,9 +55,9 @@
         font-size: larger;
     }
 </style>
-    <title>Documents</title>
-    <section class="section-orange">
-        <h2><center>Documents</center></h2>
+    <title>Information</title>
+    <section class="section-blue">
+        <h2><center>INFORMATION</center></h2>
     
     </section>
 </head>
@@ -74,18 +75,17 @@
             <p>Content for section </p>
         </div>
         <div class="section">
-            <div class="section-header" style="background-color: #ff9999;">Applicable documents</div>
-            <p>Content for section </p>
+            <div class="section-header" style="background-color: #ff9999;">Contact</div>
+            <p>Philipp Dorbath <br>
+                Application Engineer  <br>
+                mail ID:<a href="mailto:Philipp.Dorbath@avl.com">Philipp Dorbath</a></p>
+                <p>Jean Munch<br>
+                    Application Engineer <br>
+                    mail ID:<a href="mailto:jean.munch@avl.com">Jean munch</a></p>
         </div>
     </div>
 
-    <button onclick="goBack()">Go Back</button>
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+    
 </body>
 </html>
 
@@ -96,24 +96,36 @@
            
             <a href="Materialentnahmeschein.pdf" target="_blank">Request form</a>
             <p>Email to:<a href= "mailto:logistik-wangen@avl.com" target="_blank">logistik-wangen</a></p>
-            <p>Collect:<a href= "J:\06_Instructions_and_Documentation\Ibn-Fläche\Gebäudepläne">Gebäudepläne</a></p>
+            <p>Collect:<a href= "J:\06_Instructions_and_Documentation\Ibn-Fläche\Gebäudepläne"target="_blank">Gebäudepläne</a></p>
         </div>
         <div class="section">
             <div class="section-header" style="background-color: #ffcc00;">Software</div>
-            <p>Content for section </p>
-            <p>CCU-PAC R10218 <br>
+
+            <p><a href="file:///C:/SVN_release/trunk/07_GEN5_Inverter_Testsystem/CCU-PAC_7129BGR0000"target="_blank">CCU-PAC R10218 </a> <br>
                 PAU   R2529  <br>
-                IDC   R2602  <br>
-                CMU   R2316</p>
+            <p><a href="C:\SVN_release\trunk\06_GEN5_Components\IDC_7066BGR0000A04\IDC_A04_5R1.1.1_r2602"target="_blank">IDC   R2602  </a></p><br>
+            <p><a href="C:\SVN_release\trunk\06_GEN5_Components\CMU_7097BGR0000A03\CMU_A03_5R1.1.0_r2316"target="_blank">CMU   R2316</a> </p></p>
         </div>
         <div class="section">
             <div class="section-header" style="background-color: #ff9999;">Troubleshooting</div>
             <a href="https://confluence.avl.com/its/display/WANDEV/TCP+Client" target="_blank">Document</a>
-            <p>Content for section </p>
+            
         </div>
     </div>
+    <a href="#" class="back-button">
+        <button onclick="goBack()"> Back</button></a>
+    
+        
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        </script>
 
-    <section class="section-blue" style="padding-top: 20px;margin-top: 60px;">
+        </body>
+        </html>
+
+    <!--<section class="section-blue" style="padding-top: 20px;margin-top: 60px;">
         <h2><center>CONTACT</center><a id="targetWord"></a></h2>
     </section>
     
@@ -142,4 +154,4 @@
     }
 </script>
 </body>
-</html>
+</html>-->
