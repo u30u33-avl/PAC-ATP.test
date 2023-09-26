@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  
+
+
+<style>
+    /* Styles for laptops and larger screens */
+@media screen and (min-width: 1024px) {
+    /* Your CSS rules here */
+}
+
+/* Styles for tablets */
+@media screen and (max-width: 1023px) {
+    /* Your CSS rules here */
+}
+
+/* Styles for mobile devices */
+@media screen and (max-width: 767px) {
+    /* Your CSS rules here */
+}
+.section-blue {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    height: 10%;
+}
+
+    .section-orange {
+    background-color: rgb(230, 173, 69);
+    color: white;
+    padding: 20px;
+    height: 10%;
+    font-size: 24px;
+}
+
+    .sections-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    .section-header {
+        background-color: #66cc99;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        font-size: larger;
+    }
+</style>
+    <title>Documents</title>
+    <section class="section-orange">
+        <h2><center>Documents</center></h2>
+    
+    </section>
+</head>
+<body>
+    <div class="sections-container">
+        <div class="section">
+            <div class="section-header">ATP/Calibration</div>
+            <p><a href="https://desktop.avl.com/group/set/01/02/05/Pages/Home_german.aspx?RootFolder=%2Fgroup%2Fset%2F01%2F02%2F05%2FDOCUMENTS%2FATP%5FATR%20GEN%205%20DRAFT&FolderCTID=0x01200043ADFEF6136B4E4ABACC2D4E1D4FFC26&View=%7B0E3CC382%2DBD8A%2D4D0A%2DB847%2DF62912D2F207%7D">ATP Inhouse</a></p>
+            <a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/documents.documentssearch" target="_blank">RPS Document search</a>
+            <p><a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/warehouse.article/detail/f8a2b29f-3a97-4cfc-abbd-0d5748689273" target="_blank">Ware-house article</a></p>
+            <p><a href= "https://desktop.avl.com/group/set/01/08/DOCUMENTS/Forms/AllItems.aspx#InplviewHashc45b68da-f6fc-4500-b2dd-dc061f326353=FilterField1%3DDepartment%255Fx0020%255Fconcerned-FilterValue1%3DApplication%2520and%2520Customer%2520Support">Documents</a></p>
+        </div>
+        <div class="section">
+            <div class="section-header" style="background-color: #ffcc00;">VDP/MOP</div>
+            <p>Content for section </p>
+        </div>
+        <div class="section">
+            <div class="section-header" style="background-color: #ff9999;">Applicable documents</div>
+            <p>Content for section </p>
+        </div>
+    </div>
+
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
+
+<body>
+    <div class="sections-container">
+        <div class="section">
+            <div class="section-header">Tools from Warehouse</div>
+           
+            <a href="Materialentnahmeschein.pdf" target="_blank">Request form</a>
+            <p>Email to:<a href= "mailto:logistik-wangen@avl.com" target="_blank">logistik-wangen</a></p>
+            <p>Collect:<a href= "J:\06_Instructions_and_Documentation\Ibn-Fläche\Gebäudepläne">Gebäudepläne</a></p>
+        </div>
+        <div class="section">
+            <div class="section-header" style="background-color: #ffcc00;">Software</div>
+            <p>Content for section </p>
+            <p>CCU-PAC R10218 <br>
+                PAU   R2529  <br>
+                IDC   R2602  <br>
+                CMU   R2316</p>
+        </div>
+        <div class="section">
+            <div class="section-header" style="background-color: #ff9999;">Troubleshooting</div>
+            <a href="https://confluence.avl.com/its/display/WANDEV/TCP+Client" target="_blank">Document</a>
+            <p>Content for section </p>
+        </div>
+    </div>
+
+    <section class="section-blue" style="padding-top: 20px;margin-top: 60px;">
+        <h2><center>CONTACT</center><a id="targetWord"></a></h2>
+    </section>
+    
+    <center>
+    <div class="step1">
+   
+    <div><p>Name <br>
+    Designation <br>
+    mail ID:<a href="mailto:Maren.Frank@avl.com">Maren.Frank@avl.com</a></p></div>
+        </div>
+       
+            <div class="step1">
+          
+            <p>Name <br>
+            Designation <br>
+            mail ID:<a href="mailto:Maren.Frank@avl.com">Maren.Frank@avl.com</a></p></div>
+        </div></center>
+
+    <a href="#" class="back-button">
+    <button onclick="goBack()"> Go Back</button></a>
+
+    
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</body>
+</html>
