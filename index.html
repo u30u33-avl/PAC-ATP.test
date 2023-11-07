@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +7,16 @@
     <title>AVL SET</title>
     <style>
         header {
-    background-color: rgb(0, 62, 170);
-    color: #fff;
-    text-align: center;
-    padding: 0;
-    width: 100%; /* Full width */
-    height: 5%; /* 50% of the viewport height */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-}
+            background-color: rgb(0, 62, 170);
+            color: #fff;
+            text-align: center;
+            padding: 0;
+            width: 100%; /* Full width */
+            height: 5%; /* 50% of the viewport height */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+        }
 
         body {
             font-family: Arial, sans-serif;
@@ -30,7 +31,7 @@
 
         h2 {
             text-align: center; /* Center the heading text */
-            margin-bottom: 20px; 
+            margin-bottom: 20px;
         }
 
         .container {
@@ -38,11 +39,21 @@
             flex-direction: row; /* Align the content horizontally */
             align-items: flex-start; /* Align content to the top vertically */
         }
-        
+
         .image-container {
             margin-right: 80px; /* Add spacing between image and steps */
             display: inline-block; /* Make it inline with content */
+            opacity: 0;
+            animation: fade-in 2s ease-in-out forwards; /* Apply fade-in animation to the image */
+        }
 
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         img {
@@ -51,21 +62,34 @@
 
         .step-container {
             max-width: 600px; /* Adjust the maximum width as needed */
+            animation: slide-in 2s ease-in-out forwards; /* Apply animation to the step-container */
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         .step {
-            background-color: rgb(119, 233, 193);
+            background-color: #3498db;
             color: rgb(12, 12, 12);
             padding: 5px 10px;
             border-radius: 5px;
             margin-bottom: 20px; /* Increase vertical distance between steps */
             text-align: center;
         }
+
         h1 {
             text-align: center; /* Center the heading text */
             margin-bottom: 70px; /* Increase vertical space below the heading */
         }
-
+        
         /* Adjust spacing between levels */
         ul {
             list-style-type: none;
@@ -78,7 +102,9 @@
     </style>
 </head>
 <body>
-    <header> <h1> Welcome to AVL SET</h1></header>
+    <header>
+        <h1> Welcome to AVL SET <br></h1>
+    </header>
     
     <h2>ATP for PAC</h2>
     <div class="container">
@@ -101,7 +127,8 @@
                             <ul>
                                 <li>
                                     <div class="step">           
-                                         <p><a href="page1.html">Start ATP</a></p></div>
+                                        <p><a href="work.html">START ATP</a></p>
+                                    </div>
                                 </li>
                             </ul>
                         </ul>
@@ -112,3 +139,4 @@
     </div>
 </body>
 </html>
+
