@@ -1,160 +1,197 @@
 <!DOCTYPE html>
-<html>
-    <head>
-  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background-color: #f0f0f0; /* Background color */
+        }
 
+        .hex-container {
+            width: 150%; /* Adjust the size of the hexagonal container */
+            max-width: 1000px; /* Maximum width to maintain aspect ratio */
+            height: 99%; /* Maintain the same aspect ratio */
+            position: relative;
+        }
 
-<style>
-    /* Styles for laptops and larger screens */
-@media screen and (min-width: 1024px) {
-    /* Your CSS rules here */
-}
+        .hexagon {
+            width: 200px;
+            height: 220px; /* Approximate height for a regular hexagon */
+            background: linear-gradient(145deg, #ffffff 15%, #8fb3ed 25%); /* Glossy gradient background */
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5); /* Added shadow for a professional look */
+            text-align: center; /* Center text horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center text vertically */
+            padding: 20px; /* Add some padding to the hexagon */
+            
+        }
 
-/* Styles for tablets */
-@media screen and (max-width: 1023px) {
-    /* Your CSS rules here */
-}
+        .hex-container .hexagon:nth-child(1) {
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the hexagon */
+            
+        }
 
-/* Styles for mobile devices */
-@media screen and (max-width: 767px) {
-    /* Your CSS rules here */
-}
-.section-blue {
-    background-color: blue;
-    color: white;
-    padding: 20px;
-    height: 10%;
-    font-size: 24px;
-}
+        .hex-container .hexagon:nth-child(2) {
+            top: 23%;
+            left: 63%;
+            background: linear-gradient(145deg, #ffffff 15%, #f3f37f 25%); /* Glossy gradient background */
+            transform: translate(-50%, -50%); /* Center the hexagon */
+        }
 
-    .section-orange {
-    background-color: rgb(230, 173, 69);
-    color: white;
-    padding: 20px;
-    height: 10%;
-    font-size: 24px;
-}
+        .hex-container .hexagon:nth-child(3) {
+            top: 23%;
+            left: 37%;
+            background: linear-gradient(145deg, #ffffff 15%, #fb95ad 25%); /* Glossy gradient background */
+            transform: translate(-50%, -50%); /* Center the hexagon */
+        }
 
-    .sections-container {
-        display: flex;
-        justify-content: space-between;
-    }
+        .hex-container .hexagon:nth-child(4) {
+            top: 55%;
+            left: 24%;
+            background: linear-gradient(145deg, #ffffff 15%, #94e9fa 25%); /* Glossy gradient background */
+            transform: translate(-50%, -50%); /* Center the hexagon */
+        }
 
-    .section {
-        flex: 1;
-        text-align: center;
-        padding: 20px;
-        border: 1px solid #ccc;
-    }
+        .hex-container .hexagon:nth-child(5) {
+            top: 88%;
+            left: 37%;
+            background: linear-gradient(145deg, #ffffff 15%, #f1a2f1 25%); /* Glossy gradient background */
+            transform: translate(-50%, -50%); /* Center the hexagon */
+        }
 
-    .section-header {
-        background-color: #66cc99;
-        color: white;
-        font-weight: bold;
-        padding: 10px;
-        font-size: larger;
-    }
-</style>
-    <title>Documents</title>
-    <section class="section-blue">
-        <h2><center>Documents</center></h2>
-    
-    </section>
+        .hex-container .hexagon:nth-child(6) {
+            top: 88%;
+            left: 63%;
+            background: linear-gradient(145deg, #ffffff 15%, #a1ea8d 25%); /* Glossy gradient background */
+            transform: translate(-50%, -50%); /* Center the hexagon */
+        }
+
+        .hex-container .hexagon:nth-child(7) {
+            top: 55%;
+            left: 76%;
+            background: linear-gradient(145deg, #ffffff 15%, #e49b74 25%); /* Glossy gradient background */
+            transform: translate(-50%, -50%); /* Center the hexagon */
+        }
+
+        .section-header {
+            font-size: 16px; /* Adjust font size */
+            margin-bottom: 10px; /* Add margin below the section header */
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+         a {
+            text-decoration: none;
+            color: #0074d9;
+        }
+
+        .vein {
+            width: 2px; /* Width of the veins */
+            background-color: #006400; /* Dark green color for the veins */
+            position: absolute;
+        }
+
+        /* Define the positions of the main veins */
+        .main-vein {
+            top: 0.009%;
+            left: 72%;
+            height: 23%;
+            transform: rotate(90deg); /* Corrected the rotation property */
+        }
+
+        .branch-1 {
+            top: 11.5%;
+            left: 75%;
+            height: 5%;
+            transform: rotate(-15deg);
+        }
+
+        .branch-2 {
+            top: 30%;
+            left: 50%;
+            height: 10%;
+            transform: rotate(90deg); /* Corrected the rotation property */
+        }
+    </style>
 </head>
 <body>
-    <div class="sections-container">
-        <div class="section">
-            <div class="section-header">ATP/Calibration</div>
-            <p><a href="https://desktop.avl.com/group/set/01/02/05/Pages/Home_german.aspx?RootFolder=%2Fgroup%2Fset%2F01%2F02%2F05%2FDOCUMENTS%2FATP%5FATR%20GEN%205%20DRAFT&FolderCTID=0x01200043ADFEF6136B4E4ABACC2D4E1D4FFC26&View=%7B0E3CC382%2DBD8A%2D4D0A%2DB847%2DF62912D2F207%7D" target="_blank">ATP Inhouse</a></p>
+    <div class="vein main-vein hidden"></div>
+            <div class="vein branch-1 hidden"></div>
+            <div class="vein branch-2 hidden"></div>
+    <div class="hex-container">
+        <div class="hexagon">
+        <p></p>     
+        </div>
+        <div class="hexagon">
+            <div class="section-header" style="background-color: #ff9999;">ATP/CALIBRATION</div> <br> 
+            
+            <a href="https://desktop.avl.com/group/set/01/02/05/Pages/Home_german.aspx?RootFolder=%2Fgroup%2Fset%2F01%2F02%2F05%2FDOCUMENTS%2FATP%5FATR%20GEN%205%20DRAFT&FolderCTID=0x01200043ADFEF6136B4E4ABACC2D4E1D4FFC26&View=%7B0E3CC382%2DBD8A%2D4D0A%2DB847%2DF62912D2F207%7D" target="_blank">ATP Inhouse</a>
             <a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/documents.documentssearch" target="_blank">RPS Document search</a>
-            <p><a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/warehouse.article/detail/f8a2b29f-3a97-4cfc-abbd-0d5748689273" target="_blank">Ware-house article</a></p>
-            <p><a href= "https://desktop.avl.com/group/set/01/08/DOCUMENTS/Forms/AllItems.aspx#InplviewHashc45b68da-f6fc-4500-b2dd-dc061f326353=FilterField1%3DDepartment%255Fx0020%255Fconcerned-FilterValue1%3DApplication%2520and%2520Customer%2520Support" target="_blank">Documents</a></p>
+            <a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/warehouse.article/detail/f8a2b29f-3a97-4cfc-abbd-0d5748689273" target="_blank">Ware-house article</a>
+            <a href="https://desktop.avl.com/group/set/01/08/DOCUMENTS/Forms/AllItems.aspx#InplviewHashc45b68da-f6fc-4500-b2dd-dc061f326353=FilterField1%3DDepartment%255Fx0020%255Fconcerned-FilterValue1%3DApplication%2520and%2520Customer%2520Support" target="_blank">Documents</a>
+            <br> 
+            <br> 
+            <br>
+            
+
         </div>
-        <div class="section">
-            <div class="section-header" style="background-color: #ffcc00;">VDP/MOP</div>
-            <p><a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/warehouse.article"target="_blank">Wiring Diagram </a></p>
+
+
+        <div class="hexagon">
+            <div class="section-header" style="background-color:#ffcc00;">SOFTWARE</div> <br> 
+            <a href="file:///C:/SVN_release/trunk/07_GEN5_Inverter_Testsystem/CCU-PAC_7129BGR0000" target="_blank">CCU-PAC R10218</a>
+            <a href="file:///C:/Users/u30u33/Documents/New folder.AU5884E_SG3_Commissioning_and_Maintenance_Manual.pdf (2)" target="_blank">CCU-PAC R10218</a>
+            <a href="C:\SVN_release\trunk\06_GEN5_Components\IDC_7066BGR0000A04\IDC_A04_5R1.1.1_r2602" target="_blank">IDC R2602</a>
+            <a href="C:\SVN_release\trunk\06_GEN5_Components\CMU_7097BGR0000A03\CMU_A03_5R1.1.0_r2316" target="_blank">CMU R2316</a>
+            <div class="line"></div>
+            <br> 
+            <br> 
+            <br>
         </div>
-        <div class="section">
-            <div class="section-header" style="background-color: #ff9999;">Contact</div>
-            <p>Philipp Dorbath <br>
-                Application Engineer  <br>
-                mail ID:<a href="mailto:Philipp.Dorbath@avl.com">Philipp Dorbath</a></p>
-                <p>Jean Munch<br>
-                    Application Engineer <br>
-                    mail ID:<a href="mailto:jean.munch@avl.com">Jean munch</a></p>
-                    <p><a href="link1">help</a> QDAR to the development</p>
+
+        <div class="hexagon">
+            <div class="section-header" style="background-color: #ffcc00;">VDP/MOP</div> <br> <br> 
+            <p><a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/warehouse.article" target="_blank">Wiring Diagram</a></p>
+            <br> 
+            <br>
+            <br>
+        </div>
+
+
+        <div class="hexagon">
+            <div class="section-header" style="background-color: #ff9999;">TROUBLESHOOTING</div> 
+            <p>SGT Tool should be used for GEN 5</p>
+            <a href="https://confluence.avl.com/its/display/WANDEV/TCP+Client" target="_blank">Document</a>
+            <br> <br> <br>
+        </div>
+
+        <div class="hexagon">
+                <div class="section-header" style="background-color:#ffcc00;">WAREHOUSE TOOLS</div> <br>
+                <a href="Materialentnahmeschein.pdf" target="_blank">Request form</a>
+                <p>Email to: <a href="mailto:logistik-wangen@avl.com" target="_blank">logistik-wangen</a></p>
+                Collect: <a href="J:\06_Instructions_and_Documentation\Ibn-Fläche\Gebäudepläne" target="_blank">Gebäudepläne</a>
+                <br>
+                <br>
+            
+        </div>
+        <div class="hexagon">
+            <div class="section-header" style="background-color: #ff9999;">CONTACT</div>
+            <a href="mailto:Philipp.Dorbath@avl.com">Philipp Dorbath</a>Application Engineer <br>
+            <a href="mailto:jean.munch@avl.com">Jean Munch</a>Application Engineer <br>
+             <br>QDAR to the development<a href="link1">help</a></p>
         </div>
     </div>
-
-    
 </body>
 </html>
-
-<body>
-    <div class="sections-container">
-        <div class="section">
-            <div class="section-header">Tools from Warehouse</div>
-           
-            <a href="Materialentnahmeschein.pdf" target="_blank">Request form</a>
-            <p>Email to:<a href= "mailto:logistik-wangen@avl.com" target="_blank">logistik-wangen</a></p>
-            <p>Collect:<a href =<img src= "Gebäudepläne.png"target="_blank">Gebäudepläne</a></p>
-        </div>
-        <div class="section">
-            <div class="section-header" style="background-color: #ffcc00;">Software</div>
-
-            <p><a href="file:///C:/SVN_release/trunk/07_GEN5_Inverter_Testsystem/CCU-PAC_7129BGR0000"target="_blank">CCU-PAC R10218 </a> <br>
-                PAU   R2529  <br>
-            <p><a href="C:\SVN_release\trunk\06_GEN5_Components\IDC_7066BGR0000A04\IDC_A04_5R1.1.1_r2602"target="_blank">IDC   R2602  </a></p><br>
-            <p><a href="C:\SVN_release\trunk\06_GEN5_Components\CMU_7097BGR0000A03\CMU_A03_5R1.1.0_r2316"target="_blank">CMU   R2316</a> </p></p>
-        </div>
-        <div class="section">
-            <div class="section-header" style="background-color: #ff9999;">Troubleshooting</div>
-            <p>SGT Tool should be used for GEN 5 </p>
-            
-            <a href="https://confluence.avl.com/its/display/WANDEV/TCP+Client" target="_blank">Document</a>
-            
-        </div>
-    </div>
-    <a href="#" class="back-button">
-        <button onclick="goBack()"> Back</button></a>
-    
-        
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-        </script>
-
-        </body>
-        </html>
-
-    <!--<section class="section-blue" style="padding-top: 20px;margin-top: 60px;">
-        <h2><center>CONTACT</center><a id="targetWord"></a></h2>
-    </section>
-    
-    <center>
-    <div class="step1">
-   
-    <div><p>Name <br>
-    Designation <br>
-    mail ID:<a href="mailto:Maren.Frank@avl.com">Maren.Frank@avl.com</a></p></div>
-        </div>
-       
-            <div class="step1">
-          
-            <p>Name <br>
-            Designation <br>
-            mail ID:<a href="mailto:Maren.Frank@avl.com">Maren.Frank@avl.com</a></p></div>
-        </div></center>
-
-    <a href="#" class="back-button">
-    <button onclick="goBack()"> Go Back</button></a>
-
-    
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
-</body>
-</html>-->
