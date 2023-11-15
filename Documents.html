@@ -24,7 +24,7 @@
         .hexagon {
             width: 200px;
             height: 220px; /* Approximate height for a regular hexagon */
-            background: linear-gradient(145deg, #ffffff 15%, #8fb3ed 25%); /* Glossy gradient background */
+            background: linear-gradient(145deg, #ffffff 15%, #f088a0 25%); /* Glossy gradient background */
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             position: absolute;
             box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5); /* Added shadow for a professional look */
@@ -46,7 +46,7 @@
         .hex-container .hexagon:nth-child(2) {
             top: 23%;
             left: 63%;
-            background: linear-gradient(145deg, #ffffff 15%, #f088a0 25%); /* Glossy gradient background */
+            background: linear-gradient(145deg, #ffffff 15%, #cca7f9 25%); /* Glossy gradient background */
             transform: translate(-50%, -50%); /* Center the hexagon */
         }
 
@@ -81,7 +81,7 @@
         .hex-container .hexagon:nth-child(7) {
             top: 55%;
             left: 76%;
-            background: linear-gradient(145deg, #ffffff 15%, #e49b74 25%); /* Glossy gradient background */
+            background: linear-gradient(145deg, #ffffff 15%, #94fac5 25%); /* Glossy gradient background */
             transform: translate(-50%, -50%); /* Center the hexagon */
         }
 
@@ -89,12 +89,14 @@
             font-size: 16px; /* Adjust font size */
             margin-bottom: 10px; /* Add margin below the section header */
         }
+        
         a:hover {
             text-decoration: underline;
         }
-         a {
+
+        a {
             text-decoration: none;
-            color: #086bc1;
+            color: #4a46d2; /* Adjusted link color */
         }
 
         .vein {
@@ -103,19 +105,19 @@
             position: absolute;
         }
 
-        /* Define the positions of the main veins */
+        /* Define the positions of the main veins 
         .main-vein1 {
             top: 0.009%;
             left: 72%;
             height: 24%;
-            transform: rotate(90deg); /* Corrected the rotation property */
+            transform: rotate(90deg); /* Corrected the rotation property 
         }
         .main-vein2 {
             top: 29%;
             left: 19%;
             height: 24%;
-            transform: rotate(-90deg); /* Corrected the rotation property */
-        }
+            transform: rotate(-90deg);  Corrected the rotation property
+        } 
 
         .branch-1 {
             top: 12%;
@@ -128,14 +130,14 @@
             top: 30%;
             left: 50%;
             height: 10%;
-            transform: rotate(90deg); /* Corrected the rotation property */
+            transform: rotate(90deg); /* Corrected the rotation property 
         }
-        .branch-3 {
+         .branch-3 {
             top: 40.5%;
             left: 15%;
             height: 7%;
-            transform: rotate(-150deg); /* Corrected the rotation property */
-        }
+            transform: rotate(-150deg); Corrected the rotation property 
+        }*/
         .container {
         position: relative;
         width: 100%;
@@ -143,7 +145,7 @@
   }
 
   
-  .sentence-1 {
+        .sentence-1 {
             position: absolute;
             top: 20%;
             left: 80%;
@@ -161,7 +163,7 @@
         .sentence-3 {
             position: absolute;
             top: 20%;
-            left: 20%;
+            left: 80%;
             transform: translate(-50%, -50%);
             color: #000; /* Adjust text color */
         }
@@ -172,6 +174,9 @@
             left: 16%;
             transform: translate(-50%, -50%);
             color: #000; /* Adjust text color */
+        }
+        #highlightedSection {
+            background-color: yellow;
         }
         
     </style>
@@ -185,7 +190,7 @@
             <div class="vein branch-3 hidden"></div>
     <div class="hex-container">
         <div class="hexagon">
-        <p></p>     
+        <div class="section-header" style="background-color:#72f3e1;">e-CASE</div>  <br><br><br>   <br><br> <br>                                        </p>     
         </div>
         <div class="hexagon">
             <div class="section-header" style="background-color:#ffcc00;">ATP/CALIBRATION</div> <br> 
@@ -204,6 +209,7 @@
 
         
         <div class="hexagon">
+            
             
             <div class="section-header" style="background-color:#ff9999;">SOFTWARE</div> <br> 
             <a href="file:///C:/SVN_release/trunk/07_GEN5_Inverter_Testsystem/CCU-PAC_7129BGR0000" target="_blank">CCU-PAC R10218</a>
@@ -226,7 +232,9 @@
 
 
         <div class="hexagon">
+            <div id="highlightedSection"></div>
             <div class="section-header" style="background-color: #ff9999;">TROUBLESHOOTING</div> 
+           
             <p>SGT Tool should be used for GEN 5</p>
             <a href="https://confluence.avl.com/its/display/WANDEV/TCP+Client" target="_blank">Document</a>
             <br> <br> <br>
@@ -236,21 +244,21 @@
                 <div class="section-header" style="background-color:#ffcc00;">WAREHOUSE TOOLS</div> 
                 <a href="Materialentnahmeschein.pdf" target="_blank">Request form</a>
                 <p>Email to: <a href="mailto:logistik-wangen@avl.com" target="_blank">logistik-wangen</a></p>
-                Collect: <a href="J:/06_Instructions_and_Documentation/Ibn-Fläche/Abnahmeraum IBN Fläche/20230221_094315(1)" target="_blank">Gebäudepläne</a>
+                Collect: <a href="J:\06_Instructions_and_Documentation\Ibn-Fläche\Gebäudepläne" target="_blank">Gebäudepläne</a>
                 <br>
                 <br>
             
         </div>
         <div class="hexagon">
-            <div class="section-header" style="background-color: #ff9999;">CONTACT</div>
-            <a href="mailto:Philipp.Dorbath@avl.com">Philipp Dorbath</a>Application Engineer <br>
-            <a href="mailto:jean.munch@avl.com">Jean Munch</a>Application Engineer <br>
-             <br>QDAR to the development<a href="link1">help</a></p>
+            <div class="section-header" style="background-color: #ff9999;">CONTACT</div> <br> 
+            <a href="mailto:Philipp.Dorbath@avl.com">Philipp Dorbath</a>Application Engineer <br> <br>
+            <a href="mailto:jean.munch@avl.com">Jean Munch</a>Application Engineer <br> <br> <br>
+             
         </div>
     </div>
-    <div class="sentence-1">This is step 1 at the end of vein 1.</div>
+    <!-- <div class="sentence-1">This is step 1 at the end of vein 1.</div>
     <div class="sentence-2">This is sentence 2 at the end of vein 2.</div>
     <div class="sentence-1">This is step 1 at the end of vein 1.</div>
-    <div class="sentence-2">This is sentence 2 at the end of vein 2.</div>
+    <div class="sentence-2">This is sentence 2 at the end of vein 2.</div> -->
 </body>
 </html>
